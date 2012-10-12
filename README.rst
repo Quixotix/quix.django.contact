@@ -100,5 +100,5 @@ CONTACT_FORM_CLASS       ``"quix.django.contact.forms.ContactForm"``  No
 CONTACT_FORM_TEMPLATE    ``"contact/form.html"``                      No
 CONTACT_SUCCESS_TEMPLATE ``"contact/success.html"``                   No
 CONTACT_EMAIL_TEMPLATE   ``"contact/email.txt"``                      No
-======================== ========================== ================= ========
+======================== ============================================ ========
 
