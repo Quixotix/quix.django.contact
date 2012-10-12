@@ -11,10 +11,14 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(), max_length=500)
     
     def send_email(self):
-        
+        """
+        Send contact form as an email to the address specified in the
+        CONTACT_EMAILS setting.
+        """
         from_email = self.cleaned_data['email']
         if not hasattr(settings, 'CONTACT_EMAILS'):
-            raise ImproperlyConfigured("You need to specify CONTACT_EMAILS in your Django settings file.")
+            raise ImproperlyConfigured("You need to specify CONTACT_EMAILS in " / 
+                                       "your Django settings file.")
         to_emails = settings.CONTACT_EMAILS
         subject = self.cleaned_data['subject']
         template_name = getattr(settings, 'CONTACT_EMAIL_TEMPLATE', 
@@ -22,3 +26,4 @@ class ContactForm(forms.Form):
         message = render_to_string(template_name, self.cleaned_data)
         
         send_mail(subject, message, from_email, to_emails)
+    

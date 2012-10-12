@@ -92,12 +92,13 @@ The following settings can be set in ``settings.py`` for the contact form. Only
 ``CONTACT_EMAILS`` is required, which is a tuple or list of email addresses to
 which the contact form should be sent.
 
-======================== ========================== ========
-Setting                  Default                    Required
-======================== ========================== ========
-CONTACT_EMAILS                                      Yes
-CONTACT_FORM_TEMPLATE    ``"contact/form.html"``    No
-CONTACT_SUCCESS_TEMPLATE ``"contact/success.html"`` No
-CONTACT_EMAIL_TEMPLATE   ``"contact/email.txt"``    No
-======================== ========================== ========
+======================== ============================================ ========
+Setting                  Default                                      Required
+======================== ============================================ ========
+CONTACT_EMAILS                                                        Yes
+CONTACT_FORM_CLASS       ``"quix.django.contact.forms.ContactForm"``  No
+CONTACT_FORM_TEMPLATE    ``"contact/form.html"``                      No
+CONTACT_SUCCESS_TEMPLATE ``"contact/success.html"``                   No
+CONTACT_EMAIL_TEMPLATE   ``"contact/email.txt"``                      No
+======================== ========================== ================= ========
 
