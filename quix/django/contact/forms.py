@@ -17,7 +17,7 @@ class ContactForm(forms.Form):
         """
         from_email = self.cleaned_data['email']
         if not hasattr(settings, 'CONTACT_EMAILS'):
-            raise ImproperlyConfigured("You need to specify CONTACT_EMAILS in " / 
+            raise ImproperlyConfigured("You need to specify CONTACT_EMAILS in " \ 
                                        "your Django settings file.")
         to_emails = settings.CONTACT_EMAILS
         subject = self.cleaned_data['subject']
